@@ -14,10 +14,10 @@ Saya akan membuat program menggunakan Nemesida dan Discord.js yang mampu mendete
 
 ### Pembuatan Virtual Machine
 1. Membuat Virtual Machine dengan settingan sebagai berikut;
-PNG 1
+![1](https://github.com/robbyirvine/FP-IDS_05311040000023_Robby-Irvine-Surya/blob/main/FP%20Screenshot/Slide1.PNG)
 
 2. Setting File `.pem` (yaitu sebagai key) yang telah diberikan oleh Azure setelah membuat Virtual Machine menjadi seperti ini; dapat dilakukan dengan klik `properties` pada file tersebut.
-PNG 2
+![2](https://github.com/robbyirvine/FP-IDS_05311040000023_Robby-Irvine-Surya/blob/main/FP%20Screenshot/Slide2.PNG)
 
 3. Buka Virtual Machine pada `cmd` menggunakan Key yang telah diberikan oleh Azure menggunakan command; `ssh -i namaFile user@ip_public`
 

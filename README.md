@@ -42,7 +42,8 @@ Disini kita akan menginstall Nemesida pada Virtual Machine yang telah dibuat, si
 `apt install nwaf-dyn-1.18`
 
 5. Konfigurasi File `/etc/nginx/nginx.conf` dengan;
-`load_module /etc/nginx/modules/ngx_http_waf_module.so;
+```
+load_module /etc/nginx/modules/ngx_http_waf_module.so;
 ...
 worker_processes auto;
 ...
@@ -59,6 +60,7 @@ http {
     include /etc/nginx/nwaf/conf/vhosts/*.conf;
 ...
 }`
+```
 
 6. Restart Servernya menggunakan command;
 `systemctl restart nginx.service nwaf_update.service`

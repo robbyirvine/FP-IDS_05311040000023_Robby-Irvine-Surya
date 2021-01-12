@@ -303,4 +303,5 @@ node index.js
 {Public IP}/index.html?exec=/bin/bash
 ```
 
-![8](https://github.com/widyantarif/FP-IDS_05311840000030_Widyantari-Febiyanti/blob/main/Dokumentasi/Picture13.png)
+13. Discord akan mengirim sebuah Message sebagai berikut;
+![3](https://github.com/robbyirvine/FP-IDS_05311040000023_Robby-Irvine-Surya/blob/main/FP%20Screenshot/Slide3.PNG)

@@ -259,7 +259,7 @@ client.on('message', message => {
 client.login(token);
 ```
 
-8. Pada direktori ini, buatlah direktori baru bernama `commands` dan file baru bernama `cmd.js` untuk mengkonfigurasi perintah-perintah yang dapat diterima & dilaksanakan oleh Bot Discord, dengan menggunakan command berikut, dan salinlah kode dibawahnya;;
+8. Pada direktori ini, buatlah direktori baru bernama `commands` dan file baru bernama `cmd.js` untuk mengkonfigurasi perintah-perintah yang dapat diterima & dilaksanakan oleh Bot Discord, dengan menggunakan command berikut, dan salinlah kode dibawahnya; (Kodingan ini adalah untuk mengeluarkan semua message yang memiliki text berupa `Nemesida WAF` yang terdata dalam file `error.log` menjadi sebuah pesan dalam Discord Bot)
 ```cmd
 mkdir commands
 cd commands
@@ -285,7 +285,7 @@ module.exports = {
     },
 };
 ```
-9 Keluar direktori dengan menggunakan command `exit` dan lakukan installasi program `tail` dengan menggunakan command;
+9. Keluar direktori dengan menggunakan command `exit` dan lakukan installasi program `tail` dengan menggunakan command;
 ```cmd
 npm install tail
 ```

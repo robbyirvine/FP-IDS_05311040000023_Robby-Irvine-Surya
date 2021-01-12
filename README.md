@@ -26,23 +26,31 @@ PNG 2
 ### Menginstall Nginx dan Nemesida
 Disini kita akan menginstall Nemesida pada Virtual Machine yang telah dibuat, silahkan jalankan command `sudo -i` dan `apt install apt-transport-https` terlebih dahulu.
 1. Tambahkan Repository Nginx dan WAF Nemesida ke dalam Virtual Machine menggunakan command;
-`echo "deb http://nginx.org/packages/ubuntu/ bionic nginx"> /etc/apt/sources.list.d/nginx.list`
-`wget -O- https://nginx.org/packages/keys/nginx_signing.key | apt-key add -`
-`echo "deb [arch=amd64] https://repository.pentestit.ru/nw/ubuntu bionic non-free" > /etc/apt/sources.list.d/NemesidaWAF.list`
-`wget -O- https://repository.pentestit.ru/nw/gpg.key | apt-key add -`
+```cmd
+echo "deb http://nginx.org/packages/ubuntu/ bionic nginx"> /etc/apt/sources.list.d/nginx.list
+wget -O- https://nginx.org/packages/keys/nginx_signing.key | apt-key add -
+echo "deb [arch=amd64] https://repository.pentestit.ru/nw/ubuntu bionic non-free" > /etc/apt/sources.list.d/NemesidaWAF.list
+wget -O- https://repository.pentestit.ru/nw/gpg.key | apt-key add -
+```
 
 2. Lakukan Update pada Virtual Machine menggunakan command;
-`apt update && apt upgrade`
+```cmd
+apt update && apt upgrade
+```
 
 3. Tambahkan Repository Python 3.6 menggunakan command;
-`apt install python3-pip python3-dev python3-setuptools nginx librabbitmq4 libcurl4-openssl-dev libcurl3-gnutls libc6-dev dmidecode gcc rabbitmq-server`
-`python3.6 -m pip install --no-cache-dir pandas requests psutil sklearn schedule simple-crypt pika fuzzywuzzy levmatch python-Levenshtein unidecode fsspec func_timeout`
+```cmd
+apt install python3-pip python3-dev python3-setuptools nginx librabbitmq4 libcurl4-openssl-dev libcurl3-gnutls libc6-dev dmidecode gcc rabbitmq-server
+python3.6 -m pip install --no-cache-dir pandas requests psutil sklearn schedule simple-crypt pika fuzzywuzzy levmatch python-Levenshtein unidecode fsspec func_timeout
+```
 
 4. Akhirkan dengan installasi nwaf menggunakan command; 
-`apt install nwaf-dyn-1.18`
+```cmd
+apt install nwaf-dyn-1.18
+```
 
 5. Konfigurasi File `/etc/nginx/nginx.conf` dengan;
-```
+```js
 load_module /etc/nginx/modules/ngx_http_waf_module.so;
 ...
 worker_processes auto;
@@ -63,13 +71,16 @@ http {
 ```
 
 6. Restart Servernya menggunakan command;
-`systemctl restart nginx.service nwaf_update.service`
-`systemctl status nginx.service nwaf_update.service`
+```cmd
+systemctl restart nginx.service nwaf_update.service
+systemctl status nginx.service nwaf_update.service
+```
 
 7. Untuk mengecek lokasi file error.log yang akan digunakan, gunakan command;
-`cd /var/log/nginx/`
-`nano error.log`
-
+```cmd
+cd /var/log/nginx/
+nano error.log
+```
 
 ### Membuat Bot Discord
 Berikutnya kita akan membuat Bot Discord Menggunakan discord.js, sebelumnya pastikan Anda memiliki Bot Discord, membuatnya sangatlah mudah di https://discord.com/developers/applications/
@@ -79,14 +90,18 @@ Berikutnya kita akan membuat Bot Discord Menggunakan discord.js, sebelumnya past
 `mkdir robbot` lalu `cd robbot/` untuk masuk ke direktori tersebut
 
 3. Berikutnya lakukan Installasi `nodejs` menggunakan command;
-`curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -`
-`sudo apt-get install -y nodejs`
+```cmd
+curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
 
 4. Berikutnya lakukan Installasi `npm` menggunakan command;
-`npm init -y`
-`npm install discord.js`
-`npm install eslint`
-`npm install -- global eslint`
+```cmd
+npm init -y
+npm install discord.js
+npm install eslint
+npm install -- global eslint
+```
 
 5. 
 

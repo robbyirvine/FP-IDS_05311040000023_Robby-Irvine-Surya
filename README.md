@@ -103,11 +103,11 @@ npm install eslint
 npm install -- global eslint
 ```
 
-5. Konfigurasi file `.eslintrc.json` pada direktori ini menggunakan command;
+5. Konfigurasi file `.eslintrc.json` pada direktori ini menggunakan command berikut, dan salinlah kode dibawahnya;
 ```cmd
 nano .eslintrc.json
 ```
-dan salinlah kode berikut;
+
 ```js
 {
     "extends": "eslint:recommended",
@@ -158,11 +158,11 @@ dan salinlah kode berikut;
 }
 ```
 
-6. Konfigurasi file `config.json` pada direktori ini menggunakan command;
+6. Konfigurasi file `config.json` pada direktori ini menggunakan command berikut, dan salinlah kode dibawahnya;;
 ```cmd
 nano config.json
 ```
-dan salinlah kode berikut;
+
 ```js
 {
     "prefix": "$",
@@ -170,11 +170,11 @@ dan salinlah kode berikut;
 }
 ```
 
-7. Konfigurasi file `index.js` pada direktori ini menggunakan command;
+7. Konfigurasi file `index.js` pada direktori ini menggunakan command berikut, dan salinlah kode dibawahnya;;
 ```cmd
 nano index.js
 ```
-dan salinlah kode berikut;
+
 ```js
 const fs = require('fs');
 const Discord = require('discord.js');
@@ -259,13 +259,13 @@ client.on('message', message => {
 client.login(token);
 ```
 
-8. Pada direktori ini, buatlah direktori baru bernama `commands` dan file baru bernama `cmd.js` untuk mengkonfigurasi perintah-perintah yang dapat diterima & dilaksanakan oleh Bot Discord, dengan menggunakan command;
+8. Pada direktori ini, buatlah direktori baru bernama `commands` dan file baru bernama `cmd.js` untuk mengkonfigurasi perintah-perintah yang dapat diterima & dilaksanakan oleh Bot Discord, dengan menggunakan command berikut, dan salinlah kode dibawahnya;;
 ```cmd
 mkdir commands
 cd commands
 nano cmd.js
 ```
-dan salinlah kode berikut;
+
 ```js
 module.exports = {
     name: 'cmd',

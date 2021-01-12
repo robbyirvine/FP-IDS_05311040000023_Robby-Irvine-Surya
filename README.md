@@ -1,7 +1,7 @@
 # FP-IDS_05311040000023_Robby-Irvine-Surya
 
 ## Judul 
-Membuat Website Menggunakan WAF untuk Mencegah dan Mendeteksi Intrusi dengan NEMESIDA
+Mencegah dan Mendeteksi Intrusi dengan NEMESIDA WAF
 
 ## Deskripsi
 Web Application Firewall atau juga dikenal dengan istilah WAF merupakan aplikasi firewall untuk aplikasi HTTP. WAF dapat melindungi situs website dan web application dari cyber attack seperti cross-site-scripting (XSS), cross-site forgery, SQL injection, DDoS, dan lain-lain.
